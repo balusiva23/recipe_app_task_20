@@ -3,7 +3,6 @@ import { list } from "../data/Data"
 import axios from "axios";
 const Card = () => {
     const [foods, setFoods] = useState(null);
-    const [veraty, setVeraty] = useState("");
     const baseURL = `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=100`;
 
     useEffect(() => {
@@ -29,7 +28,7 @@ const Card = () => {
    
     <div className='content grid3 mtop'>
     { foods.recipes.map((food, index) => {
-        const { title, diets, extendedIngredients, image, category, vegetarian } = food
+        const { title, diets, extendedIngredients, image, vegetarian } = food
       
         return (
           <div className='box shadow' key={index}>
