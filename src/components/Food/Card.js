@@ -20,7 +20,7 @@ const Card = () => {
             .catch((err) => console.log(err));
         };
         fetchData();
-      }, []);
+      }, [baseURL]);
   return (
     foods && (
     <>
