@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { list } from "../data/Data"
 import axios from "axios";
 const Card = () => {
     const [foods, setFoods] = useState(null);
